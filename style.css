@@ -362,7 +362,7 @@ h2 {
 }
 
 .profile-photo img {
-  object-position: center 42%;
+  object-position: center 50%;
 }
 
 .profile-facts > div {
@@ -680,11 +680,6 @@ h2 {
   transform: scale(1.03);
 }
 
-/* Dernière tuile en pleine largeur du reste de la rangée */
-.gallery figure:last-child {
-  grid-column: span 2;
-  aspect-ratio: 8 / 5;
-}
 
 /* ---------- Partenaires ---------- */
 
