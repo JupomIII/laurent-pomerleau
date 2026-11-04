@@ -424,15 +424,15 @@ h2 {
 
 .split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(32px, 6vw, 72px);
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, 0.72fr);
+  gap: clamp(32px, 5vw, 64px);
   align-items: start;
 }
 
 .split-photo {
-  position: relative;
-  height: 100%;
-  min-height: 420px;
+  position: sticky;
+  top: 32px;
+  height: clamp(420px, 64vh, 560px);
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -490,10 +490,13 @@ h2 {
 /* ---------- Saisons ---------- */
 
 .season {
-  margin-top: 34px;
+  margin-top: 38px;
 }
 
 .season-year {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin: 0;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--line-light);
@@ -504,10 +507,19 @@ h2 {
   color: var(--teal);
 }
 
+.season-year::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line-light);
+}
+
 .season-block {
   display: grid;
-  gap: 7px;
-  padding: 16px 0;
+  grid-template-columns: minmax(0, 178px) minmax(0, 1fr);
+  gap: 2px 24px;
+  align-items: baseline;
+  padding: 15px 0;
   border-bottom: 1px solid var(--line-light);
 }
 
@@ -518,34 +530,37 @@ h2 {
 
 .season-block h3 {
   margin: 0;
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.35;
   letter-spacing: -0.01em;
   color: var(--ink);
 }
 
-.season-block ul {
-  display: grid;
-  gap: 5px;
-}
-
-.season-block li {
-  position: relative;
-  padding-left: 15px;
-  font-size: 14.5px;
-  line-height: 1.55;
+.season-block h3 span {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
   color: var(--muted-light);
 }
 
-.season-block li::before {
-  content: "";
-  position: absolute;
-  top: 0.75em;
-  left: 0;
-  width: 6px;
-  height: 1px;
-  background: var(--teal);
+.season-block ul {
+  display: grid;
+  gap: 4px;
+}
+
+.season-block li {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--muted-light);
+}
+
+.season-block li + li {
+  padding-top: 4px;
+  border-top: 1px solid rgba(15, 45, 58, 0.07);
 }
 
 .season-block li strong {
@@ -940,8 +955,20 @@ h2 {
   }
 
   .split-photo {
+    position: relative;
+    top: auto;
     min-height: 340px;
     height: 340px;
+  }
+
+  .season-block {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .season-block h3 span {
+    display: inline;
+    margin-left: 6px;
   }
 }
 
@@ -1303,6 +1330,11 @@ h2 {
     line-height: 1.35;
   }
 
+  .season-block {
+    grid-template-columns: 34mm minmax(0, 1fr);
+    gap: 1mm 4mm;
+  }
+
   .season-block,
   .ph {
     break-inside: avoid;
@@ -1320,6 +1352,7 @@ h2 {
   }
 
   .split-photo {
+    position: static;
     height: 46mm;
     min-height: 0;
   }
