@@ -63,7 +63,7 @@ if errorlevel 1 (
 
 echo.
 echo Termine. GitHub Pages publie en une minute environ :
-echo https://jupomiii.github.io/julien-pomerleau/
+echo https://jupomiii.github.io/laurent-pomerleau/
 call :ignored_assets
 pause
 exit /b 0
