@@ -456,6 +456,41 @@ h2 {
   color: rgba(255, 255, 255, 0.92);
 }
 
+/* ---------- Réalisations ---------- */
+
+.results-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+.results-head .intro {
+  max-width: 560px;
+}
+
+.head-photo {
+  position: relative;
+  height: 300px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.head-photo figcaption {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  padding: 5px 9px;
+  border-radius: 3px;
+  background: rgba(7, 31, 43, 0.58);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+}
+
 .timeline {
   margin-top: 34px;
   border-top: 1px solid var(--line-light);
@@ -509,13 +544,26 @@ h2 {
 }
 
 .race {
-  padding: 22px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 290px) minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 40px);
+  align-items: start;
+  padding: 20px 0;
   border-bottom: 1px solid var(--line-light);
 }
 
 .race:last-child {
   padding-bottom: 0;
   border-bottom: 0;
+}
+
+.tier {
+  margin: 0 0 5px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
 }
 
 .race h3 {
@@ -528,9 +576,11 @@ h2 {
 }
 
 .race h3 span {
-  margin-left: 8px;
+  display: block;
+  margin-top: 3px;
   font-size: 12.5px;
   font-weight: 400;
+  line-height: 1.45;
   letter-spacing: 0.01em;
   color: var(--muted-light);
 }
@@ -538,7 +588,6 @@ h2 {
 .race ul {
   display: grid;
   gap: 7px;
-  margin-top: 10px;
 }
 
 .race li {
@@ -953,6 +1002,19 @@ h2 {
     height: 340px;
   }
 
+  .results-head {
+    grid-template-columns: 1fr;
+  }
+
+  .head-photo {
+    height: 240px;
+  }
+
+  .race {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
 }
 
 @media (max-width: 760px) {
@@ -1327,7 +1389,18 @@ h2 {
   }
 
   .race {
+    grid-template-columns: 40mm minmax(0, 1fr);
+    gap: 3mm;
     padding: 3mm 0;
+  }
+
+  .tier {
+    font-size: 6.5pt;
+    margin-bottom: 1mm;
+  }
+
+  .head-photo {
+    height: 30mm;
   }
 
   .race li {

@@ -9,7 +9,7 @@
       content="Portfolio sportif — le parcours, les résultats et les photos d’un athlète de kayak de vitesse"
     />
     <title>Laurent Pomerleau — Kayak de vitesse</title>
-    <link rel="stylesheet" href="style.css?v=20" />
+    <link rel="stylesheet" href="style.css?v=21" />
   </head>
   <body>
     <header class="site-header" id="top">
@@ -65,19 +65,36 @@
       </section>
 
       <section class="section section-light" id="realisations">
-        <div class="wrap split">
-          <div class="split-copy reveal">
-            <h2>Mes réalisations</h2>
-            <p class="intro">
-              Les résultats qui ont marqué mes deux dernières saisons, du niveau régional au niveau
-              national.
-            </p>
+        <div class="wrap">
+          <div class="results-head reveal">
+            <div class="results-intro">
+              <h2>Mes réalisations</h2>
+              <p class="intro">
+                Les compétitions sont classées par niveau — essais de l’équipe nationale, championnats
+                canadiens, puis championnats québécois et circuit provincial.
+              </p>
+            </div>
+            <figure class="head-photo">
+              <img
+                src="assets/photos/action.jpeg"
+                alt="Laurent Pomerleau en sprint, pagaie en main et gerbe d’eau autour du kayak"
+                loading="lazy"
+              />
+              <figcaption>en action</figcaption>
+            </figure>
+          </div>
 
             <div class="season">
               <p class="season-year">2026</p>
 
               <div class="race">
-                <h3>Nationaux <span>Team Trials 2</span></h3>
+                <div class="race-label">
+                  <p class="tier">National</p>
+                  <h3>
+                    Team Trials 2
+                    <span>essais de l’équipe nationale · Montréal, juin</span>
+                  </h3>
+                </div>
                 <ul>
                   <li>
                     <span class="mark">1<sup>er</sup> U14</span>
@@ -87,21 +104,44 @@
               </div>
 
               <div class="race">
-                <h3>Coupe du Canada <span>championnats du monde</span></h3>
+                <div class="race-label">
+                  <p class="tier">National</p>
+                  <h3>
+                    Coupe du Canada
+                    <span>bassin olympique, Montréal · en marge de la Coupe du monde</span>
+                  </h3>
+                </div>
                 <ul>
-                  <li><span class="mark">Argent</span><span>K4 · également engagé en K1 et K2</span></li>
+                  <li><span class="mark">Argent</span><span>K4 · engagé en K1 et K2</span></li>
                 </ul>
               </div>
 
               <div class="race">
-                <h3>Équipe du Québec</h3>
+                <div class="race-label">
+                  <p class="tier">National</p>
+                  <h3>Championnats canadiens <span>Ottawa, août</span></h3>
+                </div>
                 <ul>
-                  <li><span class="mark">Sélection</span><span>Catégorie espoir 2026</span></li>
+                  <li><span class="mark">K1</span><span>200 m · 1000 m · 6000 m</span></li>
+                  <li><span class="mark">K2</span><span>500 m · 1000 m</span></li>
                 </ul>
               </div>
 
               <div class="race">
-                <h3>Championnats québécois U16 <span>bassin olympique</span></h3>
+                <div class="race-label">
+                  <p class="tier">Provincial</p>
+                  <h3>Équipe du Québec espoir <span>sélection 2026</span></h3>
+                </div>
+                <ul>
+                  <li><span class="mark">Sélection</span><span>Retenu sur l’équipe provinciale</span></li>
+                </ul>
+              </div>
+
+              <div class="race">
+                <div class="race-label">
+                  <p class="tier">Provincial</p>
+                  <h3>Championnats québécois U16 <span>bassin olympique, août</span></h3>
+                </div>
                 <ul>
                   <li><span class="mark">Argent</span><span>K1 1000 m</span></li>
                   <li><span class="mark">Bronze</span><span>K1 200 m</span></li>
@@ -110,29 +150,27 @@
               </div>
 
               <div class="race">
-                <h3>Championnats québécois U14</h3>
+                <div class="race-label">
+                  <p class="tier">Provincial</p>
+                  <h3>Championnats québécois U14</h3>
+                </div>
                 <ul>
-                  <li><span class="mark">Champion</span><span>K1 500 m</span></li>
+                  <li><span class="mark">Or</span><span>K1 500 m</span></li>
                   <li>
-                    <span class="mark">Champion</span>
+                    <span class="mark">Or</span>
                     <span>K2 500 m · sélection pour les nationaux</span>
                   </li>
                 </ul>
               </div>
 
               <div class="race">
-                <h3>Championnats nationaux <span>Ottawa</span></h3>
+                <div class="race-label">
+                  <p class="tier">Provincial</p>
+                  <h3>Régates du Québec <span>circuit de la saison</span></h3>
+                </div>
                 <ul>
-                  <li><span class="mark">K1</span><span>200 m · 1000 m · 6000 m</span></li>
-                  <li><span class="mark">K2</span><span>500 m · 1000 m</span></li>
-                </ul>
-              </div>
-
-              <div class="race">
-                <h3>Autres résultats</h3>
-                <ul>
-                  <li><span class="mark">Champion</span><span>K1 2000 m</span></li>
-                  <li><span class="mark">Vainqueur</span><span>3 régates de la saison</span></li>
+                  <li><span class="mark">Or</span><span>K1 2000 m</span></li>
+                  <li><span class="mark">1<sup>er</sup></span><span>Vainqueur des 3 régates</span></li>
                 </ul>
               </div>
             </div>
@@ -141,14 +179,20 @@
               <p class="season-year">2025</p>
 
               <div class="race">
-                <h3>Championnats québécois <span>bassin olympique</span></h3>
+                <div class="race-label">
+                  <p class="tier">Provincial</p>
+                  <h3>Championnats québécois <span>bassin olympique</span></h3>
+                </div>
                 <ul>
-                  <li><span class="mark">Champion</span><span>K1 500 m</span></li>
+                  <li><span class="mark">Or</span><span>K1 500 m</span></li>
                 </ul>
               </div>
 
               <div class="race">
-                <h3>Distinctions <span>Estrie</span></h3>
+                <div class="race-label">
+                  <p class="tier">Régional</p>
+                  <h3>Distinctions <span>Estrie</span></h3>
+                </div>
                 <ul>
                   <li>
                     <span class="mark">Titre</span>
@@ -159,16 +203,6 @@
                 </ul>
               </div>
             </div>
-          </div>
-
-          <figure class="split-photo reveal">
-            <img
-              src="assets/photos/action.jpeg"
-              alt="Laurent Pomerleau en sprint, pagaie en main et gerbe d’eau autour du kayak"
-              loading="lazy"
-            />
-            <figcaption>en action</figcaption>
-          </figure>
         </div>
       </section>
 
