@@ -490,82 +490,74 @@ h2 {
 /* ---------- Saisons ---------- */
 
 .season {
-  margin-top: 38px;
+  margin-top: 40px;
+}
+
+.season + .season {
+  margin-top: 56px;
 }
 
 .season-year {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   margin: 0;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--line-light);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--teal);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--ink);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 }
 
-.season-year::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--line-light);
-}
-
-.season-block {
-  display: grid;
-  grid-template-columns: minmax(0, 178px) minmax(0, 1fr);
-  gap: 2px 24px;
-  align-items: baseline;
-  padding: 15px 0;
+.race {
+  padding: 22px 0;
   border-bottom: 1px solid var(--line-light);
 }
 
-.season-block:last-child {
+.race:last-child {
   padding-bottom: 0;
   border-bottom: 0;
 }
 
-.season-block h3 {
+.race h3 {
   margin: 0;
-  font-size: 14.5px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   line-height: 1.35;
   letter-spacing: -0.01em;
   color: var(--ink);
 }
 
-.season-block h3 span {
-  display: block;
-  margin-top: 3px;
-  font-size: 12px;
+.race h3 span {
+  margin-left: 8px;
+  font-size: 12.5px;
   font-weight: 400;
-  line-height: 1.4;
   letter-spacing: 0.01em;
   color: var(--muted-light);
 }
 
-.season-block ul {
+.race ul {
   display: grid;
-  gap: 4px;
+  gap: 7px;
+  margin-top: 10px;
 }
 
-.season-block li {
+.race li {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
   font-size: 14.5px;
   line-height: 1.5;
   color: var(--muted-light);
 }
 
-.season-block li + li {
-  padding-top: 4px;
-  border-top: 1px solid rgba(15, 45, 58, 0.07);
-}
-
-.season-block li strong {
-  font-weight: 500;
-  color: var(--ink);
+.mark {
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
 }
 
 /* ---------- Championnats ---------- */
@@ -961,15 +953,6 @@ h2 {
     height: 340px;
   }
 
-  .season-block {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 8px;
-  }
-
-  .season-block h3 span {
-    display: inline;
-    margin-left: 6px;
-  }
 }
 
 @media (max-width: 760px) {
@@ -1030,6 +1013,19 @@ h2 {
 
   .profile-facts > div {
     grid-template-columns: 84px minmax(0, 1fr);
+  }
+
+  .season-year {
+    font-size: 21px;
+  }
+
+  .race {
+    padding: 18px 0;
+  }
+
+  .race li {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 10px;
   }
 
   .honours-inner {
@@ -1325,17 +1321,27 @@ h2 {
     font-size: 9pt;
   }
 
-  .season-block li {
+  .season-year {
+    font-size: 13pt;
+    padding-bottom: 1.5mm;
+  }
+
+  .race {
+    padding: 3mm 0;
+  }
+
+  .race li {
+    grid-template-columns: 18mm minmax(0, 1fr);
+    gap: 3mm;
     font-size: 8.5pt;
     line-height: 1.35;
   }
 
-  .season-block {
-    grid-template-columns: 34mm minmax(0, 1fr);
-    gap: 1mm 4mm;
+  .mark {
+    font-size: 6.5pt;
   }
 
-  .season-block,
+  .race,
   .ph {
     break-inside: avoid;
     page-break-inside: avoid;
